@@ -1,0 +1,18 @@
+YOOCHOOSE
+网址：https://2015.recsyschallenge.com/challenge.html
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+YOOCHOOSE数据集是RecSys Challenge 2015发布的数据集，包含很多电商环境下的匿名session。有yoochoose-clicks.dat和yoochoose-buys.dat两个部分，SR-GNN只用了前者，也即点击session。
+数据格式（备注，数据集原先无列名，需要自己加）：
+OrderedDict([('session_id', '879'), ('timestamp', '2014-04-06T22:35:36.439Z'), ('item_id', '214839313'), ('category', '0')])
+OrderedDict([('session_id', '851'), ('timestamp', '2014-04-04T11:26:16.847Z'), ('item_id', '214819427'), ('category', '0')])
+
+
+DIGINETICA
+网址：https://drive.google.com/drive/folders/0B7XZSACQf0KdXzZFS21DblRxQ3c
+网址：http://cikm2016.cs.iupui.edu/cikm-cup/
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DIGINETICA数据集是CIKM CUP 2016 Track2发布的数据集，同样是电商环境下的session数据，不过DIGINETICA是有大部分匿名，有小部分有userId，SR-GNN把全部数据当作匿名数据来用。除了session（浏览日志）数据之外，DIGINETICA还有搜索日志、交易日志、产品数据和大量的产品图像。但SR-GNN只用到了dataset-train-diginetica.zip中的train-item-views.csv。也即只用到了浏览日志，clicks、queries和purchases等表格都没用上。
+数据格式：
+OrderedDict([('sessionId', '1'), ('userId', 'NA'), ('itemId', '81766'), ('timeframe', '526309'), ('eventdate', '2016-05-09')])
+OrderedDict([('sessionId', '1'), ('userId', 'NA'), ('itemId', '31331'), ('timeframe', '1031018'), ('eventdate', '2016-05-09')])
+
